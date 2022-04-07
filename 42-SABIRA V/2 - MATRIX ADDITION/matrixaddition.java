@@ -33,19 +33,19 @@ public class Addition {
 			System.out.println(" matrix A");
 			for(int i=0;i<p;i++)
 				for(int j=0;j<q;j++)
-					System.out.println(a[i][j]+ " ");
+					System.out.print(a[i][j]+ " ");
 			System.out.println();
 			
 			System.out.println(" matrix B");
 			for(int i=0;i<m;i++)
 				for(int j=0;j<n;j++)
-					System.out.println(b[i][j]+ " ");
+					System.out.print(b[i][j]+ " ");
 			System.out.println();
 			
 			System.out.println(" Sum matrix: ");
 			for(int i=0;i<m;i++)
 				for(int j=0;j<n;j++)
-					System.out.println(a[i][j]+b[i][j]+ " ");
+					System.out.print((a[i][j]+b[i][j])+ " ");
 			System.out.println();
 			
 		}
