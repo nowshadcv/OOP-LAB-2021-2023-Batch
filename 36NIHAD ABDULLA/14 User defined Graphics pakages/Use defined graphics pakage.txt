@@ -1,0 +1,127 @@
+package figure;
+
+public interface FiqureCi {
+	double perimeter();
+	double area();
+
+}
+
+
+package figure;
+
+public class Circle implements FiqureCi {
+	private double radius;
+	public Circle(double r) {radius = r;}
+	public double perimeter() {return (2*3.14*radius);}
+	public double area() { return (3.14*radius*radius);}
+
+}
+
+
+package figure;
+
+public interface FiqureSq {
+	 int perimeter();
+	 int area();
+}
+
+
+package figure;
+
+public class Square implements FiqureSq{
+	private int side;
+	public Square(int s) { side = s;}
+	public int perimeter() {return (4*side);}
+	public int area() { return (side*side);}
+
+}
+
+package figure;
+
+public interface FiqureTr {
+	int perimeter();
+	double area();
+
+}
+
+
+
+
+package figure;
+
+public class Triangle implements FiqureTr{
+	private int side1,side2,side3;
+	public Triangle(int s1, int s2,int s3) {
+		side1 = s1; side2 = s2; side3=s3;}
+	public int perimeter() {return side1+side2+side3;}
+	public double area() {
+		double s = (side1+side2+side3)/2;
+		double a =Math.sqrt((s-side1)+(s-side2)+(s-side3));
+		return a;
+		
+	}
+
+}
+
+package figure;
+
+public interface FiqureRe {
+	int perimeter();
+	int area();
+
+}
+
+
+package figure;
+
+public class Rectangle implements FiqureRe{
+	private int length,bredth;
+	
+	public Rectangle(int l, int b) { length = l ; bredth = b;}
+	public int perimeter() {return (2*(length+bredth));}
+	public int area() { return (length*bredth);}
+	
+
+}
+
+
+
+import figure.*;
+import java.util.Scanner;
+public class TestPackage_fiqures {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the side of Square: ");
+		int s = sc.nextInt();
+		Square sq = new Square(s);
+		System.out.println("Perimeter : "+ sq.perimeter());
+		System.out.println("Area: " + sq.area());
+		System.out.println("Enter the radius of circle: ");
+		double r = sc.nextDouble();
+		Circle ci = new Circle(r);
+		System.out.println("Perimeter : " + ci.perimeter());
+		System.out.println("Area: " + ci.area());
+		
+		System.out.println("Enter the side1 of Triangle: ");
+		int s1 = sc.nextInt();
+		System.out.println("Enter the side2 of Triangle: ");
+		int s2 = sc.nextInt();
+		System.out.println("enter the side3 of Triangle: ");
+		int s3 = sc.nextInt();
+		Triangle tr = new Triangle(s1, s2, s3);
+		System.out.println("Perimeter : " +tr.perimeter());
+		System.out.println("Area: "+ tr.area());
+		
+		System.out.println("Enter the length of rectangle: ");
+		int l = sc.nextInt();
+		System.out.println("Enter the bredth of the rectangle: ");
+		int b = sc.nextInt();
+		Rectangle rec = new Rectangle(l,b);
+		System.out.println("Perimeter : " +rec.perimeter());
+		System.out.println("Area: "+ rec.area());
+	}
+		
+
+	}
+
