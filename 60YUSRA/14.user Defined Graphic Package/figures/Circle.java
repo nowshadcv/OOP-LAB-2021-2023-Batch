@@ -1,8 +1,0 @@
-package figures;
-
-public class Circle implements FigureCi {
-	private float radius;
-	public Circle(float r){radius = r;}
-	public double perimeter(){return(2*3.14*radius);}
-	public double area(){return(3.14*radius*radius);}
-}
