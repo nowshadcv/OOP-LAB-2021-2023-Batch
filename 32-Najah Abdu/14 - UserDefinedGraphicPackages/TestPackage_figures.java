@@ -1,7 +1,5 @@
 package figures;
 
-package figures;
-
 public interface FigureCi {
 	double perimeter();
 	double area();
@@ -19,8 +17,6 @@ public  class Circle implements FigureCi{
 	public double area(){
 		return (3.14*radius*radius);}
 }
-
-
 package figures;
 public interface FigureTr {
 	int perimeter();
@@ -49,14 +45,11 @@ public class Triangle implements FigureTr {
 
 
 package figures;
-
 public interface FigureSq {
 	int perimeter();
 	int area();}
 
-
 package figures;
-
 public class Square implements FigureSq {
 	private int side;
 	public Square(int s){
@@ -69,7 +62,6 @@ public class Square implements FigureSq {
 
 
 package figures;
-
 public class Rectangle implements  FigureSq {
 	int length;
 	int bredth;
@@ -84,10 +76,6 @@ public class Rectangle implements  FigureSq {
 
 }
 
-
-
-
-package Test;
 package Test;
 import figures.*;
 import java.util.Scanner;
@@ -124,9 +112,5 @@ public class TestPackage_figures {
 		Rectangle re = new Rectangle(l,b);
 		System.out.println("perimerter  "+re.perimeter());
 		System.out.println("Area "+re.area());
-		
-		
-
 	}
-
 }
